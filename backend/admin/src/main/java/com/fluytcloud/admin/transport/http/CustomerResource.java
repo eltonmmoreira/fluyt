@@ -54,7 +54,7 @@ public class CustomerResource {
     }
 
     @POST
-    @jakarta.annotation.security.RolesAllowed("administrator")
+  //  @jakarta.annotation.security.RolesAllowed("administrator")
     public Response create(CustomerRequest customerRequest) {
         var customer = CUSTOMER_MAPPER.map(customerRequest);
         customer = customerPersistUseCase.create(customer);
